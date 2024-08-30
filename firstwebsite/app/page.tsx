@@ -1,25 +1,8 @@
-'use client';
-
-import { useState } from 'react';
-import { Raleway, Sora } from 'next/font/google';
-
-// Fonts
-const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
-const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
-
 export default function Page() {
-  const [message, setMessage] = useState('Hello, welcome to my portfolio!');
-
   return (
-    <html lang="en">
-      <body className={`${raleway.variable} ${sora.variable}`}>
-        <div>
-          <h1>{message}</h1>
-          <button onClick={() => setMessage('Thanks for visiting!')}>
-            Click me
-          </button>
-        </div>
-      </body>
-    </html>
+    <div>
+      <h1>Welcome to My Vercel Website</h1>
+      <p>This is a basic demo website built with Next.js and deployed on Vercel.</p>
+    </div>
   );
 }
