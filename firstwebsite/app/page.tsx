@@ -1,3 +1,5 @@
+'use client'; // Add this line at the top
+
 import { useState } from 'react';
 import { Raleway, Sora } from 'next/font/google';
 
