@@ -1,33 +1,20 @@
-import { Raleway } from 'next/font/google';
-import { Sora } from 'next/font/google';
+import './globals.css';
+import { Raleway, Sora } from 'next/font/google';
 
-const primary = Raleway({
-    variable: '--font-primary',
-    subsets: ['latin'],
-    display: 'swap'
-});
+const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
+const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
 
-const secondary = Sora({
-    variable: '--font-secondary',
-    subsets: ['latin'],
-    display: 'swap'
-});
+export const metadata = {
+  title: 'My Vercel Website',
+  description: 'A basic demo website built with Next.js and deployed on Vercel.',
+};
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      data-theme="dark"
-      data-brand="indigo"
-      data-accent="violet"
-      data-neutral="slate"
-      data-border="conservative"
-      data-solid="contrast"
-      data-solid-style="flat"
-      data-surface="translucent"
-      data-transition="all"
-      className={`${primary.variable} ${secondary.variable}`}
-    >
-      {children}
-    </div>
+    <html lang="en">
+      <body className={`${raleway.variable} ${sora.variable}`}>
+        {children}
+      </body>
+    </html>
   );
 }
