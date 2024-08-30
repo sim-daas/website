@@ -13,13 +13,21 @@ const secondary = Sora({
     display: 'swap'
 });
 
-
-data-theme="dark"
-data-brand="indigo"
-data-accent="violet"
-data-neutral="slate"
-data-border="conservative"
-data-solid="contrast"
-data-solid-style="flat"
-data-surface="translucent"
-data-transition="all"
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      data-theme="dark"
+      data-brand="indigo"
+      data-accent="violet"
+      data-neutral="slate"
+      data-border="conservative"
+      data-solid="contrast"
+      data-solid-style="flat"
+      data-surface="translucent"
+      data-transition="all"
+      className={`${primary.variable} ${secondary.variable}`}
+    >
+      {children}
+    </div>
+  );
+}
