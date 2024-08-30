@@ -38,7 +38,7 @@ export default function Page() {
         <div className={`${primary.variable} ${secondary.variable} p-8`}>
             {/* Introduction Section */}
             <section id="intro" className="mb-12">
-                <h1 className="text-4xl font-bold mb-4">Hello, I'm [Your Name]</h1>
+                <h1 className="text-4xl font-bold mb-4">Hello, I&apos;m [Your Name]</h1>
                 <p className="text-lg mb-4">A passionate developer with a focus on creating beautiful and functional web applications.</p>
                 <button onClick={() => setIsModalOpen(true)} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</button>
             </section>
@@ -73,7 +73,7 @@ export default function Page() {
             {/* Contact Section */}
             <section id="contact" className="mb-12">
                 <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
-                <p className="mb-4">Feel free to reach out if you'd like to collaborate on a project or just want to connect!</p>
+                <p className="mb-4">Feel free to reach out if you&apos;d like to collaborate on a project or just want to connect!</p>
                 <form className="space-y-4">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
