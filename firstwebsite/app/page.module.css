@@ -7,19 +7,18 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.header h1 {
+  margin: 0;
 }
 
-.logo h1 {
-  margin-left: 1rem;
+.nav {
+  margin-top: 1rem;
 }
 
 .nav a {
