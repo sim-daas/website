@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Software Dev Project</h1>
+        <h1 className={styles.title}>Software Dev Project</h1>
         <nav className={styles.nav}>
           <a href="#about">About</a>
           <a href="#services">Services</a>
