@@ -1,8 +1,11 @@
+/* Set the background to white and text color to black */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   font-family: var(--font-raleway);
+  background-color: #fff;
+  color: #000;
 }
 
 .header {
@@ -13,8 +16,10 @@
   border-bottom: 1px solid #ddd;
 }
 
-.header h1 {
+.title {
+  font-size: 3rem; /* Increase the font size of the heading */
   margin: 0;
+  color: #000;
 }
 
 .nav {
@@ -23,7 +28,7 @@
 
 .nav a {
   margin: 0 1rem;
-  color: #333;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
 }
@@ -48,7 +53,7 @@
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 8px;
-  background: #fff;
+  background: #f9f9f9;
 }
 
 .featuresList {
@@ -74,7 +79,7 @@
 }
 
 .contactForm button {
-  background: #333;
+  background: #000;
   color: #fff;
   padding: 0.75rem;
   border: none;
@@ -83,13 +88,13 @@
 }
 
 .contactForm button:hover {
-  background: #555;
+  background: #333;
 }
 
 .footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-  background: #333;
-  color: #fff;
+  background: #f1f1f1;
+  color: #000;
 }
