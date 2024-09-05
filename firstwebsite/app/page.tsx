@@ -1,14 +1,10 @@
-import Image from 'next/image';
 import styles from './page.module.css'; // Assuming you have specific styles for this page
 
 export default function Page() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <div className={styles.logo}>
-          <Image src="/logo.svg" alt="Project Logo" width={100} height={100} />
-          <h1>Software Dev Project</h1>
-        </div>
+        <h1>Software Dev Project</h1>
         <nav className={styles.nav}>
           <a href="#about">About</a>
           <a href="#services">Services</a>
@@ -67,7 +63,7 @@ export default function Page() {
         <h2>Contact Us</h2>
         <p>
           Have any questions or want to get started with your project? Reach out to us
-          and we'll be happy to help!
+          and we&apos;ll be happy to help!
         </p>
         <form className={styles.contactForm}>
           <label htmlFor="name">Name:</label>
