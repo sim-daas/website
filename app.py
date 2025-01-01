@@ -51,7 +51,7 @@ class User(BaseModel):
 
 @app.get("/get_user", response_model=User)
 def get_user(name: str, pswd: str):
-    user_data = user.find_one({"name": name}, {"password": pswd}, {"_id": 0})
+    user_data = user.find_one({"name": name,"password": pswd}, {"_id": 0})
     if not user_data:
         raise HTTPException(status_code=404, detail="User not found")
     return user_data
