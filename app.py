@@ -28,6 +28,37 @@ contactus = db["contactus"]
 newsletter_emails = db["subscribed_emails"]
 admins_collection = db["admins"]
 ADMIN_KEY = os.getenv('ADMIN_KEY')
+user = db["user_data"]
+auth = db["id_pswd"]
+
+
+
+class User(BaseModel):
+    name: str
+    username: str
+    password: str
+    Calculus: int
+    Optimization_Techniques: int
+    Quantum_Mechanics: int
+    OOPs: int
+    Signals_and_Systems: int
+    Intro_to_AI_and_ML: int
+    Introduction_to_IoT: int
+    Design_and_Prototyping: int
+    Communication_Strategies: int
+    _3D_Printing: int
+    Management_of_Wealth: int
+
+@app.get("/get_user/{name}", response_model=User)
+def get_user(name: str):
+    user_data = user.find_one({"name": name}, {"_id": 0})
+    if not user_data:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user_data
+
+
+
+
 
 
 class Submission(BaseModel):
