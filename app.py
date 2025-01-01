@@ -49,9 +49,9 @@ class User(BaseModel):
     _3D_Printing: int
     Management_of_Wealth: int
 
-@app.get("/get_user/{name}", response_model=User)
-def get_user(name: str):
-    user_data = user.find_one({"name": name}, {"_id": 0})
+@app.get("/get_user/{name},{pswd}", response_model=User)
+def get_user(name: str, pswd: str):
+    user_data = user.find_one({"name": name}, {"_id": 0}, {"password": pswd)
     if not user_data:
         raise HTTPException(status_code=404, detail="User not found")
     return user_data
